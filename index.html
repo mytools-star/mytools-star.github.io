@@ -1,11 +1,47 @@
 <!doctype html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <title>MyTools</title>
+<meta charset="utf-8">
+<title>My Tools</title>
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<link rel="stylesheet" href="css/style.css?v=dev">
 </head>
+
 <body>
-  <h1>MyTools GitHub Pages OK</h1>
-  <p>Website sudah berhasil online.</p>
+
+<div class="sidebar">
+  <h3>Dashboard</h3>
+  <button onclick="showChecker()">Cek Domain</button>
+  <button onclick="showValidasi()">Validasi</button>
+  <button onclick="showFairplay()">Fairplay</button>
+  <button onclick="showShortcut()">Shortcut</button>
+  <button onclick="showData()">Data</button>
+</div>
+
+<div class="content" id="content">
+  <h2>Dashboard</h2>
+</div>
+
+<script>
+  const VERSION = Date.now();
+  function loadJS(file){
+    const s=document.createElement("script");
+    s.src=file+"?v="+VERSION;
+    s.defer=true;
+    document.body.appendChild(s);
+  }
+
+  loadJS("js/core.js");
+  loadJS("js/checker.js");
+  loadJS("js/validasi.js");
+  loadJS("js/fairplay.js");
+  loadJS("js/shortcut.js");
+  loadJS("js/withdraw.js");
+</script>
+
 </body>
 </html>
